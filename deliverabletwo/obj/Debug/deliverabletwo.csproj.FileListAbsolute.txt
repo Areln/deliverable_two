@@ -1,0 +1,7 @@
+C:\Users\andaa\Desktop\IMPORTANT FILES\GCProjects\deliverabletwo\deliverabletwo\bin\Debug\deliverabletwo.exe.config
+C:\Users\andaa\Desktop\IMPORTANT FILES\GCProjects\deliverabletwo\deliverabletwo\bin\Debug\deliverabletwo.exe
+C:\Users\andaa\Desktop\IMPORTANT FILES\GCProjects\deliverabletwo\deliverabletwo\bin\Debug\deliverabletwo.pdb
+C:\Users\andaa\Desktop\IMPORTANT FILES\GCProjects\deliverabletwo\deliverabletwo\obj\Debug\deliverabletwo.csprojAssemblyReference.cache
+C:\Users\andaa\Desktop\IMPORTANT FILES\GCProjects\deliverabletwo\deliverabletwo\obj\Debug\deliverabletwo.csproj.CoreCompileInputs.cache
+C:\Users\andaa\Desktop\IMPORTANT FILES\GCProjects\deliverabletwo\deliverabletwo\obj\Debug\deliverabletwo.exe
+C:\Users\andaa\Desktop\IMPORTANT FILES\GCProjects\deliverabletwo\deliverabletwo\obj\Debug\deliverabletwo.pdb
