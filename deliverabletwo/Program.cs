@@ -10,75 +10,94 @@ namespace deliverabletwo
 {
     class Program
     {
-        private static bool hasActivity = false;
-        private static bool hasNmPeople = false;
 
-        private static string inputActivity = "";
-        private static string inputNmPeople = "";
+        private static Int32 inputActivity = 0;
+        private static Int32 inputNmPeople = 0;
 
         static void Main(string[] args)
         {
 
             Console.WriteLine("Hello! What are you in the mood for today?");
 
-            while (!hasActivity)
+            while (inputActivity == 0)
             {
+                Int32 input = 0;
                 Console.WriteLine("Here are your options: \n 1)Action \n 2) Chill times \n 3) Danger \n 4) Good food");
-                inputActivity = Console.ReadLine();
-                if (inputActivity == "1" || inputActivity == "2" || inputActivity == "3" || inputActivity == "4")
+                try
                 {
-                    hasActivity = true;
+                    input = Convert.ToInt32(Console.ReadLine());
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine("Input was not a number");
+                    input = 0;
+                    continue;
+                }
+                if (input == 1 || input == 2 || input == 3 || input == 4)
+                {
+                    inputActivity = input;
                 }
                 else
                 {
-                    Console.WriteLine(inputActivity + " Input not understood");
+                    Console.WriteLine("Input was not understood");
                 }
             }
 
-            while (!hasNmPeople)
+            while (inputNmPeople == 0)
             {
-                Console.WriteLine("How many other people plan on going? \n 1) 0 \n 2) 1-4 \n 3) 5-10 \n 4) 11+");
-                inputNmPeople = Console.ReadLine();
-                if (inputNmPeople == "1" || inputNmPeople == "2" || inputNmPeople == "3" || inputNmPeople == "4")
+                Int32 input = 0;
+                Console.WriteLine("How many other people plan on going?");
+                try
                 {
-                    hasNmPeople = true;
+                    input = Convert.ToInt32(Console.ReadLine());
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine("Input was not a number");
+                    input = 0;
+                    continue;
+                }
+                if (input >= 0)
+                {
+                    inputNmPeople = input;
                 }
                 else
                 {
-                    Console.WriteLine(inputNmPeople + " Input not understood");
+                    Console.WriteLine("Input not understood");
                 }
             }
+
+            Console.Write("Okay! If you are in the mood for ");
 
             switch (inputActivity)
             {
-                case "1":
-                    Console.Write("You could go watch Stock Car Racing. ");
+                case 1:
+                    Console.Write("action, you could go watch Stock Car Racing. ");
                     break;
-                case "2":
-                    Console.Write("Hiking can be very relaxing. ");
+                case 2:
+                    Console.Write("chill times, hiking can be very relaxing. ");
                     break;
-                case "3":
-                    Console.Write("Feeling brave enough for sky diving? ");
+                case 3:
+                    Console.Write("Danger, are you feeling brave enough for sky diving? ");
                     break;
-                case "4":
-                    Console.Write("The closest Taco bell is open till 2:00 am. ");
+                case 4:
+                    Console.Write("Good food, the closest Taco bell is open till 2:00 am. ");
                     break;
             }
 
-            switch (inputNmPeople)
+            if (inputNmPeople == 0)
             {
-                case "1":
-                    Console.Write("You should walk in sneakers.");
-                    break;
-                case "2":
-                    Console.Write("You should travel in a sedan. ");
-                    break;
-                case "3":
-                    Console.Write("You should travel in a Volkswagen bus. ");
-                    break;
-                case "4":
-                    Console.Write("You should travel in an airplane. ");
-                    break;
+                Console.Write("You should walk in sneakers.");
+            }else if (inputNmPeople > 0 && inputNmPeople <= 4)
+            {
+                Console.Write("You should travel in a sedan. ");
+            }else if (inputNmPeople > 4 && inputNmPeople <= 10)
+            {
+                Console.Write("You should travel in a Volkswagen bus. ");
+            }
+            else if (inputNmPeople > 10)
+            {
+                Console.Write("You should travel in an airplane. ");
             }
 
 
